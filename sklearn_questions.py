@@ -70,14 +70,12 @@ class KNearestNeighbors(ClassifierMixin, BaseEstimator):
 
     def fit(self, X, y):
         """Fitting function.
-
         Parameters
         ----------
         X : ndarray, shape (n_samples, n_features)
             Data to train the model.
         y : ndarray, shape (n_samples,)
             Labels associated with the training data.
-
         Returns
         -------
         self : instance of KNearestNeighbors
@@ -103,12 +101,10 @@ class KNearestNeighbors(ClassifierMixin, BaseEstimator):
 
     def predict(self, X):
         """Predict function.
-
         Parameters
         ----------
         X : ndarray, shape (n_test_samples, n_features)
             Data to predict on.
-
         Returns
         -------
         y : ndarray, shape (n_test_samples,)
@@ -134,14 +130,12 @@ class KNearestNeighbors(ClassifierMixin, BaseEstimator):
 
     def score(self, X, y):
         """Calculate the score of the prediction.
-
         Parameters
         ----------
         X : ndarray, shape (n_samples, n_features)
             Data to score on.
         y : ndarray, shape (n_samples,)
             target values.
-
         Returns
         ----------
         score : float
@@ -155,11 +149,9 @@ class KNearestNeighbors(ClassifierMixin, BaseEstimator):
 
 class MonthlySplit(BaseCrossValidator):
     """CrossValidator based on monthly split.
-
     Split data based on the given `time_col` (or default to index). Each split
     corresponds to one month of data for the training and the next month of
     data for the test.
-
     Parameters
     ----------
     time_col : str, defaults to 'index'
@@ -199,7 +191,6 @@ class MonthlySplit(BaseCrossValidator):
 
     def get_n_splits(self, X, y=None, groups=None):
         """Return the number of splitting iterations in the cross-validator.
-
         Parameters
         ----------
         X : array-like of shape (n_samples, n_features)
